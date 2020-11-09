@@ -106,7 +106,7 @@ class Matrix {
     private int matrix[][];
     private int row, col;
 
-    public Matrix(int row, int col) {
+    Matrix(int row, int col) {
 
         this.matrix = new int[row][col];
         this.row = row;
@@ -124,7 +124,7 @@ class Matrix {
 
     }
 
-    public Matrix(int matrix[][], int row, int col) {
+    Matrix(int matrix[][], int row, int col) {
 
         this.matrix = new int[row][col];
         this.row = row;
@@ -142,7 +142,7 @@ class Matrix {
 
     }
 
-    public Matrix add(Matrix objMatrix) {
+    Matrix add(Matrix objMatrix) {
 
         Matrix result = new Matrix(objMatrix.row, objMatrix.col);
         int j;
@@ -155,7 +155,7 @@ class Matrix {
 
     }
 
-    public Matrix subtract(Matrix objMatrix) {
+    Matrix subtract(Matrix objMatrix) {
 
         Matrix result = new Matrix(objMatrix.row, objMatrix.col);
         int j;
@@ -168,7 +168,7 @@ class Matrix {
 
     }
 
-    public Matrix multiply(Matrix objMatrix) {
+    Matrix multiply(Matrix objMatrix) {
 
         Matrix result = new Matrix(row, objMatrix.col);
         int j, k;
@@ -182,7 +182,7 @@ class Matrix {
 
     }
 
-    public void display() {
+    void display() {
 
         int j;
         for (int i = 0; i < row; i++) {
