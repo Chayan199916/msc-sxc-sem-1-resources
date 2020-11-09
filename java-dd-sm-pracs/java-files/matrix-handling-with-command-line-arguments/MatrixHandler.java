@@ -149,7 +149,7 @@ class Matrix {
 
         for (int i = 0; i < result.row; i++)
             for (j = 0; j < result.col; j++)
-                result.matrix[i][j] = this.matrix[i][j] + objMatrix.matrix[i][j];
+                result.matrix[i][j] = matrix[i][j] + objMatrix.matrix[i][j];
 
         return result;
 
@@ -162,7 +162,7 @@ class Matrix {
 
         for (int i = 0; i < result.row; i++)
             for (j = 0; j < result.col; j++)
-                result.matrix[i][j] = this.matrix[i][j] - objMatrix.matrix[i][j];
+                result.matrix[i][j] = matrix[i][j] - objMatrix.matrix[i][j];
 
         return result;
 
@@ -170,13 +170,13 @@ class Matrix {
 
     public Matrix multiply(Matrix objMatrix) {
 
-        Matrix result = new Matrix(this.row, objMatrix.col);
+        Matrix result = new Matrix(row, objMatrix.col);
         int j, k;
 
-        for (int i = 0; i < this.row; i++)
-            for (j = 0; j < this.col; j++)
+        for (int i = 0; i < row; i++)
+            for (j = 0; j < col; j++)
                 for(k = 0; k < objMatrix.col; k++)
-                    result.matrix[i][k] += this.matrix[i][j] * objMatrix.matrix[j][k];
+                    result.matrix[i][k] += matrix[i][j] * objMatrix.matrix[j][k];
 
         return result;
 
@@ -185,11 +185,11 @@ class Matrix {
     public void display() {
 
         int j;
-        for (int i = 0; i < this.row; i++) {
+        for (int i = 0; i < row; i++) {
 
-            for (j = 0; j < this.col; j++) {
+            for (j = 0; j < col; j++) {
 
-                System.out.print(this.matrix[i][j] + "\t");
+                System.out.print(matrix[i][j] + "\t");
 
             }
             System.out.println("\n");
