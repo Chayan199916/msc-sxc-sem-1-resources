@@ -28,4 +28,10 @@ host os is nothing but the os of the currently running machine on which current 
 host os provides necessary system files to jvm to execute.
 for execution of program jre is required and it's a foreign app. so main needs to be public. so that it can be accessed from outside the main class.
 there's something called package which works like header file. in java ther's a default package that is language.
-
+09.11.2020
+----------
+String functions:
+length() compareTo() equals() compareToIgnoreCase() startsWith() endsWith() charAt() lastIndexOf() indexOf()
+isEmpty() regionMatches()
+assignment : input an array of strings through command line args
+and arrange them in lexicographically
