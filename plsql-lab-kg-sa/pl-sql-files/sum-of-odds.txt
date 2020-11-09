@@ -1,0 +1,21 @@
+SET SERVEROUTPUT ON
+ 
+DECLARE
+
+     v_sum NUMBER :=0;
+
+ BEGIN
+ 
+    FOR v_counter in 1..10 LOOP
+ 
+        CONTINUE WHEN mod(v_counter,2) = 0 ;
+ 
+        v_sum := v_sum + v_counter;
+
+         DBMS_OUTPUT.PUT_LINE ('Current sum is: ' || v_sum);
+
+     END LOOP;
+ 
+DBMS_OUTPUT.PUT_LINE ('Final sum is : ' || v_sum);
+
+ END;

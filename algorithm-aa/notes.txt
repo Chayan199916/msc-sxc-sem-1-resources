@@ -1,0 +1,10 @@
+day-1
+---------------------
+for devising algo there are many techniques
+ex of divide and conquer : quick sort and merge sort
+another type of algo is greedy algo ex : prim's algo, kruskal's algo
+dynamic programming. ex: bellman ford algo
+backtracking ex: 8 queen's problem
+
+day-2
+---------------------

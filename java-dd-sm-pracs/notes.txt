@@ -1,0 +1,31 @@
+day - 1
+-----------
+procedural programming lang - top down approach
+object oriented prog lang - bottom up approach
+bottom up means smaller modules are developed first and depending on the requirement they are combined to develope larger things.
+they are relatively older prog lang compared to java
+very first ver of java prog lang - jdk 1.0
+latest ver jse 14
+java was developed by sun microsystems . c and c++ were developed in at&t
+syntactical structure of c has been taken from c and oo concept has been borrowed from java.
+portability made java immensely popular, bytecode played major role.
+internet is collection of heterogeneous platforms.
+after we get the bytecode, it needs to be interpreted to run the prog.
+recommended book - Java Fundamentals by Schildt and Skrien
+alternative - Java - The Complete Reference by Schildt
+byte code is a combination of an optimized set of instr to be executed in java virtual machine.
+byte code has been designed in such a way that it can be executed irrespective of platform
+if a machine has jvm installed then that system will be able to interpret bytecode
+jvm is available along with java runtime environment
+a src code in java has extenson .java and bytecode has extension .class
+compiled time environment in java
+java apis class files
+every class in java is by default implicitly sub class of object class
+the main method in java is parametrized. string array is provided to take command line args.
+portability can be inter machine or intra machine
+portability is nothing but involvement of multiuser system, computer nw. 
+host os is nothing but the os of the currently running machine on which current apps will be executed
+host os provides necessary system files to jvm to execute.
+for execution of program jre is required and it's a foreign app. so main needs to be public. so that it can be accessed from outside the main class.
+there's something called package which works like header file. in java ther's a default package that is language.
+

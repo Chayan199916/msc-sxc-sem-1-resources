@@ -1,0 +1,3 @@
+a distributed database is a collection of data which belong logically to the same system but are spread over the sites of a computer network. it emphasis two imp characteristic.
+-data are not in the same server
+-logical corelation : the fact that the data has some properties that ties them together which helps them to get distributed.

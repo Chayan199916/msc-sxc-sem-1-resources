@@ -1,0 +1,75 @@
+
+day - 1
+---------------
+inter process vs intra process
+process life cycle
+multi processing system
+scheduling algos
+----------------
+day - 2
+----------------
+default specifier = public within same package and private outside package
+package = acting as namespace
+if we define constructor as private and try to creat eobject within same class's main functn no problem arises, but if we try to create from diff class, it will give error.
+
+class Class2_1
+
+ {​​
+
+ Class2_1()
+
+ {​​
+
+ System.out.print("Constructor called ....");
+
+ }​​
+
+ void show()
+
+ {​​
+
+ System.out.println("\nIn method show .... ");
+
+ }​​
+
+ }​​
+
+
+
+class Class2
+
+ {​​
+
+ public static void main(String argv[])
+
+ {​​
+
+ System.out.println("\nIn main .... ");
+
+ Class2_1 obj=new Class2_1();
+
+ obj.show();
+
+ }​​
+
+ }​​
+
+Recursion based on IPC (Inter Process Communication)
+
+class MainCall
+{​​
+static String s[]={​​"Java","Is","Fun"}​​;
+static int c;
+public static void main(String args[])
+{​​
+System.out.println(c);
+System.out.println(s[c]);
+c=c+1;
+if(c==3)
+System.exit(0);
+main(s);
+}​​
+}​​
+
+ distibuted os - p k sinha 
+ distibuted os - andrew tanenbum
