@@ -1,6 +1,6 @@
 class StringHandler {
     
-    private static void performSorting(String args[]){
+    private static void sortingHandler(String args[]){
 
         int j;
         String temp = new String();
@@ -10,7 +10,7 @@ class StringHandler {
 
             temp = args[i];
             j = i - 1;
-            while(j > 0 && args[j].compareTo(temp) > 0){
+            while(j >= 0 && args[j].compareTo(temp) > 0){
 
                 args[j + 1] = args[j];
                 j--;
@@ -25,14 +25,14 @@ class StringHandler {
     }
     private static void display(String args[]){
         
-        for(String indivsString : args)
-        System.out.print(indivsString + " ");
+        for(String indivString : args)
+            System.out.print(indivString + " ");
         System.out.println();
 
     }
     public static void main(String[] args) {
         
-        performSorting(args);
+        sortingHandler(args);
 
     }
 
