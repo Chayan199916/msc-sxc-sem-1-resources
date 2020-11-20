@@ -35,3 +35,17 @@ length() compareTo() equals() compareToIgnoreCase() startsWith() endsWith() char
 isEmpty() regionMatches()
 assignment : input an array of strings through command line args
 and arrange them in lexicographically
+-----------
+20.11.2020
+-----------
+inheritance
+only one base class is required for inheritance. there's no concept of direct multiple inheritance. using interface we can implement multi inheritance.
+derived class - sub class, base class - super class
+in c++ we had private protected public access specifier
+diff between private protected public.
+in java we have one extra access specifier, default
+concept of package is imp.
+same package subclass - path is same
+same package non sub class - has a relationship
+this concept is called association. creating object of one class inside another class.
+extend keyword is used to inherit members of one class to another class.
