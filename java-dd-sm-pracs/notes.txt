@@ -49,3 +49,18 @@ same package subclass - path is same
 same package non sub class - has a relationship
 this concept is called association. creating object of one class inside another class.
 extend keyword is used to inherit members of one class to another class.
+-------------
+23.11.2020
+--------------
+dynamic method dispatch
+objects are created in the time of execution.
+abstract method and class
+final keyword
+abstract and final can't be used together. it's illogical.
+abstract class can have constructors. it's used to initialize the data members of abstract class using super keywords from sub classes.
+interface
+an interface contains both data memebers and member functions. member functions are by default abstract
+all the data memebers are final and static.
+interface members are by default public
+assignment - 
+ther is a super class has a member req methods to initialize members. there are two sub classes. one will find out all the prime factors and other one will find out all the prime nos <= no.
