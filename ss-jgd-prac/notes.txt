@@ -1,0 +1,8 @@
+1.12.2020
+
+openmp is a medium using which we utilize multiple cores to implement parallel programming.
+program that uses multiple threads.
+uses shared memory
+concept of critical section comes into picture
+every tech details handled by openmp.
+#pragma compiler directive
