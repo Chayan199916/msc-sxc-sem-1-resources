@@ -64,3 +64,5 @@ all the data memebers are final and static.
 interface members are by default public
 assignment - 
 ther is a super class has a member req methods to initialize members. there are two sub classes. one will find out all the prime factors and other one will find out all the prime nos <= no.
+
+if a method throws an exception, it doesn't happen always that the invoking method has to report exception. if a method throws checked exception, that exception must be handled by the invoking method. unchecked exception is not needed to be reported.

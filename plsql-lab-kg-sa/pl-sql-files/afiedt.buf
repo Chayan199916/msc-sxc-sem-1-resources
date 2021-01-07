@@ -1,0 +1,9 @@
+CREATE OR REPLACE PROCEDURE adjust_salary(in_employee_id IN emp.e_id%TYPE, in_percent IN NUMBER)
+IS
+BEGIN
+    UPDATE emp
+    SET salary = salary + salary * in_percent / 100
+    WHERE e_id = in_employee_id;
+    commit;
+END;
+/

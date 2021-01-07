@@ -1,0 +1,85 @@
+-- Create the following Tables maintaining proper Integrity Constraints
+-- Student(s_roll,sname,s_address,c-id)
+-- Course(c-id,cname,cfees,cstartdate)
+-- (a) Insert at least 5 records in each table. Keep proper validation so that the value of
+-- course fees (cfees) lies between 2000-15000 and the c-id starts with the letters ‘CI’.
+-- (b) Write a PL/SQL code using cursor to increase the course fees of the course ‘Animation’
+-- by 10% and other courses by 5%. Ensure that the updation is properly done.
+-- (c) Write a procedure/function to input the c-id of a Course and return the Course details.
+-- (d) Use at least one Inbuilt and one User defined Exception.
+
+-- create table students_sxc_2k16(s_roll number(4) not null, s_name varchar2(15) not null, 
+--     s_address varchar2(25), c_id varchar2(5), primary key(s_roll), 
+--         foreign key(c_id) references courses_sxc_2k16(c_id));
+
+-- create table courses_sxc_2k16(c_id varchar2(5) not null check(c_id like 'ci%'), 
+--     c_name varchar2(10) not null, c_fees number(5) not null check(c_fees >= 2000 and c_fees <= 15000), 
+--         c_startdate date, primary key(c_id));
+
+-- insert into students_sxc_2k16 values(50,'Manjistha','Kharagpur','ci1');
+-- insert into students_sxc_2k16 values(51,'Chayan','Sodpur','ci1');
+-- insert into students_sxc_2k16 values(52,'Reshav','Sodpur','ci2');
+-- insert into students_sxc_2k16 values(53,'Ravindrababu','Chennai','ci4');
+-- insert into students_sxc_2k16 values(54,'Aswini','Uluberia','ci5');
+
+-- insert into courses_sxc_2k16 values('ci1', 'algo ds', 2500, '02-sep-05');
+-- insert into courses_sxc_2k16 values('ci2', 'animation', 5500, '05-sep-05');
+-- insert into courses_sxc_2k16 values('ci3', 'soft eng', 7500, '06-sep-05');
+-- insert into courses_sxc_2k16(c_id, c_name, c_fees) values('ci4', 'dbms', 9500);
+-- insert into courses_sxc_2k16 values('ci5', 'java', 10500, '08-sep-05');
+-- insert into courses_sxc_2k16(c_id, c_name, c_fees) values('ci6', 'dbms', 14990);
+
+-- declare 
+-- 		new_fees courses_sxc_2k16.c_fees%type;
+-- 		fees courses_sxc_2k16.c_fees%type;
+-- 		name courses_sxc_2k16.c_name%type;
+-- 		id courses_sxc_2k16.c_id%type;
+--         fees_overflow exception;
+-- 		start_date courses_sxc_2k16.c_startdate%type;
+-- 		cursor cur_courses
+-- 		is
+-- 		select * from courses_sxc_2k16;
+-- begin
+-- 	open cur_courses;
+-- 	loop
+-- 		fetch cur_courses into id, name, fees, start_date;
+--         if cur_courses%notfound then
+--             exit;
+-- 		elsif name = 'animation’ then
+-- 			new_fees := fees + (10 / 100 * fees);
+-- 		else
+--             new_fees := fees + (5 / 100 * fees);
+-- 		end if;
+--         if new_fees > 15000 then
+--             raise fees_overflow;
+--         end if;
+-- 		update courses_sxc_2k16 
+--         set c_fees=new_fees 
+--         where c_id = id;
+--         commit;
+-- 	end loop;
+--     exception
+--         when fees_overflow then
+--             dbms_output.put_line('increment in fees not allowed for id : '|| id || ' coz it has fees : ' || fees);
+--     close cur_courses;
+-- end;
+-- /		
+
+-- set serveroutput on;
+-- declare
+--     details courses_sxc_2k16%rowtype;
+--     id courses_sxc_2k16.c_id%type;
+--     procedure get_details(id in courses_sxc_2k16.c_id%type, details out courses_sxc_2k16%rowtype)
+--     is
+--     begin
+--         select * into details from courses_sxc_2k16 where c_id = id;
+--         exception
+--             when no_data_found then
+--                 dbms_output.put_line('No such data present for this id value');
+--     end;
+-- begin
+--     id := '&course_id';
+--     get_details(id, details);
+--     dbms_output.put_line(details.c_id || ' ' || details.c_name || ' ' || details.c_fees || ' ' || details.c_startdate);
+-- end;
+-- /
