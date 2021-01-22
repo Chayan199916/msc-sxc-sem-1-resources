@@ -1,0 +1,10 @@
+/*
+ * Create a package called Centigrade which will have a class to initialize and
+ * display temperature in the centigrade scale. Similarly, create another
+ * package called Farenheit which will have a class to initialize and display
+ * temperature in the farenheit scale. Both of these packages are to be created
+ * in the same path. Now create another class named as Compare in the parent
+ * directory of the previously created packages and it will be used to compare
+ * the temperature values stored in the previously defined classes and to
+ * display suitable messages.
+ */
